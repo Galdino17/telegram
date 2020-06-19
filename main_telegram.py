@@ -13,7 +13,7 @@ def send_welcome(message):
 	try:
 		mensagem  = str(Camisas.retornar_pedidos()[0])
 		nome_do_usuario = str(message.chat.first_name)
-		bot.reply_to(message, "Olá " + nome_do_usuario + ", \n \n Temos um total de " + mensagem + " livros no Estoque")
+		bot.reply_to(message, "Olá " + nome_do_usuario + ", \n \n Temos um total de " + mensagem + " livros no Estoque.")
 	except Exception as e:
 		print(mensagem[0])
 		print(e)
