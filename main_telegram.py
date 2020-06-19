@@ -22,6 +22,6 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-	bot.reply_to(message, "Ops, não reconhecemos esse comando: " + message.text)
+	bot.reply_to(message, "Ops, não reconhecemos esse comando: " + message.text[1:])
 
 bot.polling()
