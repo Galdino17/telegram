@@ -6,7 +6,7 @@ bot = telebot.TeleBot("852989604:AAGT3s4YiF2XfmolAvJgKJ2T3BneaaGbyaQ")
 
 @bot.message_handler(commands=['start', 'help', 'pedido'])
 def send_welcome(message):
-	bot.reply_to(message, "Olá, o que você precisa??")
+	bot.reply_to(message, "Olá, o que você precisa?? Estou executando pelo Heroku.")
 
 @bot.message_handler(commands=['Estoque'])
 def send_welcome(message):
