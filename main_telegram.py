@@ -4,7 +4,7 @@ import Camisas
 def oi():
 	if message.lower() == "oi" or message.lower() == "ola":
 		return True
-	else
+	else:
 		return False
 
 bot = telebot.TeleBot("852989604:AAGT3s4YiF2XfmolAvJgKJ2T3BneaaGbyaQ")
