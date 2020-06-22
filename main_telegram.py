@@ -2,6 +2,7 @@ import telebot
 import Camisas
 
 def oi(message):
+	message = str(message)
 	if message.lower() == "oi" or message.lower() == "ola":
 		return True
 	else:
@@ -27,7 +28,7 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-	if oi(message):
+	if oi(message.text):
 		bot.reply_to(message, "Olá, o que você precisa?? Estou executando pelo Heroku.")
 	else:
 		bot.reply_to(message, "Ops, não reconhecemos esse comando: " + message.text[1:])
