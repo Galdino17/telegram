@@ -1,6 +1,11 @@
 import telebot
 import Camisas
 
+def oi():
+	if message.lower() == "oi" or message.lower() == "ola":
+		return True
+	else
+		return False
 
 bot = telebot.TeleBot("852989604:AAGT3s4YiF2XfmolAvJgKJ2T3BneaaGbyaQ")
 
@@ -22,6 +27,9 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-	bot.reply_to(message, "Ops, não reconhecemos esse comando: " + message.text[1:])
+	if oi():
+		bot.reply_to(message, "Olá, o que você precisa?? Estou executando pelo Heroku.")
+	else:
+		bot.reply_to(message, "Ops, não reconhecemos esse comando: " + message.text[1:])
 
 bot.polling()
